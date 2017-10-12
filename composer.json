@@ -1,5 +1,5 @@
 {
-    "name": "coduo/phpspec-data-provider-extension",
+    "name": "moave/phpspec-data-provider-extension",
     "type": "library",
     "keywords": ["phpspec", "dataprovider", "extension", "coduo", "data", "provider"],
     "license": "MIT", 
