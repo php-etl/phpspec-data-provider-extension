@@ -18,7 +18,7 @@ class DataProviderMaintainer implements Maintainer
      *
      * @return bool
      */
-    public function supports(ExampleNode $example)
+    public function supports(ExampleNode $example): bool
     {
         return $this->haveValidDataProvider($example);
     }
@@ -63,7 +63,7 @@ class DataProviderMaintainer implements Maintainer
     /**
      * @return int
      */
-    public function getPriority()
+    public function getPriority(): int
     {
         return 50;
     }
