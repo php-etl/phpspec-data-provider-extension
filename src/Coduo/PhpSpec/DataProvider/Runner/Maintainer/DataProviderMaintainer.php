@@ -35,14 +35,14 @@ class DataProviderMaintainer implements Maintainer
         $exampleNum = $this->getExampleNumber($example->getTitle());
         $providedData = $this->getDataFromProvider($example);
 
-        if (! array_key_exists($exampleNum, $providedData)) {
+        if (!array_key_exists($exampleNum, $providedData)) {
             return ;
         }
 
         $data = $providedData[$exampleNum];
 
         foreach ($example->getFunctionReflection()->getParameters() as $position => $parameter) {
-            if (!isset($data[$position])) {
+            if (!array_key_exists($position, $data)) {
                 continue;
             }
             $collaborators->set($parameter->getName(), $data[$position]);
