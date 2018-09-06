@@ -29,9 +29,12 @@ class DataProviderMaintainer implements Maintainer
      * @param MatcherManager         $matchers
      * @param CollaboratorManager    $collaborators
      */
-    public function prepare(ExampleNode $example, Specification $context,
-                            MatcherManager $matchers, CollaboratorManager $collaborators)
-    {
+    public function prepare(
+        ExampleNode $example,
+        Specification $context,
+        MatcherManager $matchers,
+        CollaboratorManager $collaborators
+    ): void {
         $exampleNum = $this->getExampleNumber($example->getTitle());
         $providedData = $this->getDataFromProvider($example);
 
@@ -55,9 +58,12 @@ class DataProviderMaintainer implements Maintainer
      * @param MatcherManager         $matchers
      * @param CollaboratorManager    $collaborators
      */
-    public function teardown(ExampleNode $example, Specification $context,
-                             MatcherManager $matchers, CollaboratorManager $collaborators)
-    {
+    public function teardown(
+        ExampleNode $example,
+        Specification $context,
+        MatcherManager $matchers,
+        CollaboratorManager $collaborators
+    ): void {
     }
 
     /**
