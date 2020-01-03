@@ -22,7 +22,7 @@
         "symfony/filesystem": "^3.1",
         "symfony/process": "^3.1",
         "symfony/console": "^3.1",
-        "bossa/phpspec2-expect": "^3.0"
+        "bossa/phpspec2-expect": "^3.1.1"
     },
     "autoload": {
         "psr-0": { "Coduo\\PhpSpec": "src/"}
