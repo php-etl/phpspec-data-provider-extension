@@ -15,14 +15,14 @@
     ],
     "require": {
         "php": "^7.2",
-        "phpspec/phpspec": "^5.1 || ^6.1"
+        "phpspec/phpspec": "^5.1"
     },
     "require-dev": {
         "behat/behat": "^3.1",
         "symfony/filesystem": "^3.1",
         "symfony/process": "^3.1",
         "symfony/console": "^3.1",
-        "bossa/phpspec2-expect": "^3.1.1"
+        "bossa/phpspec2-expect": "^3.1"
     },
     "autoload": {
         "psr-0": { "Coduo\\PhpSpec": "src/"}
