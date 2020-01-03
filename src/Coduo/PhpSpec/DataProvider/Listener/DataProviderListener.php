@@ -32,7 +32,7 @@ class DataProviderListener implements EventSubscriberInterface
                 $subject = $example->getSpecification()->getClassReflection()->newInstance();
                 $providedData = $example->getSpecification()->getClassReflection()->getMethod($dataProviderMethod)->invoke($subject);
 
-                if (is_array($providedData)) {
+                if (is_iterable($providedData)) {
                     foreach ($providedData as $i => $dataRow) {
                         $examplesToAdd[] = new ExampleNode($i+1 . ') ' . $example->getTitle(), $example->getFunctionReflection());
                     }
