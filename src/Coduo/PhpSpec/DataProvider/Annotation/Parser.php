@@ -10,7 +10,7 @@ class Parser
      * @param \ReflectionMethod $reflection
      * @return bool
      */
-    public function getDataProvider(\ReflectionMethod $reflection)
+    public function getDataProvider(\ReflectionFunctionAbstract $reflection)
     {
         if (false === ($docComment = $reflection->getDocComment())) {
             return null;
