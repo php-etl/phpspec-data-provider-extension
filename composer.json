@@ -1,5 +1,5 @@
 {
-    "name": "moave/phpspec-data-provider-extension",
+    "name": "php-etl/phpspec-data-provider-extension",
     "type": "library",
     "keywords": ["phpspec", "dataprovider", "extension", "coduo", "data", "provider"],
     "license": "MIT", 
@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": "^7.0",
-        "phpspec/phpspec": "^5.0"
+        "phpspec/phpspec": "^6.1"
     },
     "require-dev": {
         "behat/behat": "^3.1",
