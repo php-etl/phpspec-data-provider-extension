@@ -90,13 +90,13 @@ class DataProviderMaintainer implements Maintainer
         $subject = $example->getSpecification()->getClassReflection()->newInstance();
         $providedData = $example->getSpecification()->getClassReflection()->getMethod($dataProviderMethod)->invoke($subject);
 
-        if (!is_array($providedData)) {
+        if (!is_iterable($providedData)) {
             return false;
         }
 
         $exampleParamsCount = count($example->getFunctionReflection()->getParameters());
         foreach ($providedData as $dataRow) {
-            if (!is_array($dataRow)) {
+            if (!is_iterable($dataRow)) {
                 return false;
             }
         }
@@ -124,7 +124,7 @@ class DataProviderMaintainer implements Maintainer
         $subject = $example->getSpecification()->getClassReflection()->newInstance();
         $providedData = $example->getSpecification()->getClassReflection()->getMethod($dataProviderMethod)->invoke($subject);
 
-        return (is_array($providedData)) ? $providedData : array();
+        return (is_iterable($providedData)) ? $providedData : array();
     }
 
     /**
